@@ -1,0 +1,466 @@
+html{
+    font-size: 62.5%;
+
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}       
+
+/* Globales */
+
+body{
+    background-color: #ffffff;
+    font-size: 16px;
+    line-height: 1.5;
+
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal; 
+}
+
+
+
+/* fuentes */
+
+@font-face {
+    font-family: 'bonanovaSC-bold';
+    src: url(/fuentes/BonaNovaSC-Bold.ttf);
+    font-weight: bold;
+    font-style: bold;
+}
+
+@font-face {
+    font-family: 'bonanovaSC-italic';
+    src: url(/fuentes/BonaNovaSC-Italic.ttf);
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'bonanovaSC-regular';
+    src: url(/fuentes/BonaNovaSC-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+p{
+    font-family: 'bonanovaSC-regular';
+    font-size: 1.8rem;
+    color: black;
+    text-align: left;
+    margin: 0 1rem 1rem 2rem; 
+}
+
+a{
+    font-family: 'bonanovaSC-italic';
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+h1,h2,h3{
+    font-family: 'bonanovaSC-bold';
+    text-align: center;
+    color: rgb(0, 0, 0);
+    text-align: start;
+    margin-left: 4rem;
+}
+
+
+.titulo{
+    font-family: 'bonanovaSC-italic';
+    font-size: 3rem;
+} 
+
+h1{
+    font-size: 4rem;
+}
+
+h2{
+    font-size: 3rem;
+    margin-left: 2rem;
+}
+
+h3{
+    font-size: 2.4rem;
+}
+
+/* Botones */
+
+.boton{
+    display: block;
+    padding: 1rem;
+    background-color: #33728b;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;  
+    margin-bottom: 1.5rem;
+    transition: background-color 1s ease-in-out;
+    margin: 3rem 2rem 0 2rem;
+    border-radius: 0.5rem;
+}
+
+.boton:hover{
+    cursor: pointer;
+    background-color: #ffffff;
+    color:  #000000;
+}
+
+
+
+    /** Header **/
+
+.header{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+
+.header-img{
+    width: 15rem;
+}
+
+    /** Footer **/
+
+.footer{
+    display: flex;
+    justify-content: center;
+    background-color: #000000;
+
+    margin-top: 10rem;
+    padding: 1rem ;
+}
+
+.imagen__footer{
+    max-width: 100%;
+    height: 4rem;
+    margin: 1rem
+}
+
+@media (min-width: 768px) {
+    .imagen__footer{
+    max-width: 100%;
+    height: 4rem;
+    margin-bottom: 1rem;
+}
+}
+
+   /** Navegacion **/
+
+.navegacion{
+    background-color: #b6b6b6;
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 5rem;
+
+}
+
+.navegacion__enlace{
+    color: #000000;
+    font-size: 2rem;
+}
+
+.navegacion__enlace--activo,
+.navegacion__enlace:hover{
+    color: rgb(255, 255, 255);
+}
+
+
+/* Carrusel y contenido */
+
+.container{
+    height: 10rem;
+    width: 100%;
+    display: grid;
+    place-content: center;
+}
+
+.slider{
+    width: 100%;
+    max-width: 120rem;
+    height: 76.8rem;
+    overflow: hidden;
+
+}
+
+.slider ul{
+    display: flex;
+    padding: 0;
+    width: 400%;
+    list-style: none;
+
+    animation:  slide 20s infinite cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+
+.slider img {
+        width: 100%;
+        object-fit: cover;
+}
+
+@keyframes slide{
+    0% {margin-left: 0;}
+    20% {margin-left: 0;}
+
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+
+    75% {margin-left: -300%;}
+    100% {margin-left: -300%;}
+}
+
+
+@media (max-width: 768px) {
+    h1 {
+        margin-bottom: 1rem; /* Reduce el margen del h1 en móviles */
+        font-size: 2.5rem; /* También puedes reducir el tamaño del texto */
+    }
+
+    .container {
+        /* En móviles, la altura fija de 10rem es aún más problemática.
+           Considera anularla o ponerle un 'min-height'. */
+        height: auto; /* Permite que se adapte al contenido */
+        padding-top: 1rem; /* Menos padding en móviles */
+        padding-bottom: 1rem;
+    }
+    
+    .slider {
+        /* Reduce la altura del slider en móviles para que no sea tan grande */
+        height: 40rem; /* Por ejemplo, 40rem (640px) o menos */
+    }
+}
+
+
+@media (min-width: 453px) {
+    .slider{
+        height: 20rem;
+    }
+}
+
+@media (min-width: 480px) {
+    .slider{
+        height: 60rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .contenido__principal{
+        display: grid;
+        grid-template-columns: repeat(2 , 1fr);
+    }
+
+    .contenido__principal-contenido{
+        margin-top: 4rem;
+    }
+
+    .titulo{
+        font-size: 5rem;
+    }
+}
+
+.contenido__principal-texto{
+    text-decoration-line: none;
+    margin-top: 2rem;
+    font-weight: bold;
+}
+
+
+
+/* Secciones */
+
+.tradiciones{
+    background-image: url(../img/imagenes/IMG-20250727-WA0040.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 20rem;
+    background-position: center right ;
+    margin-top: 8rem;
+}
+
+@media (min-width: 768px) {
+    .tradiciones{
+        margin-top: 2rem;
+    }
+}
+
+.tradiciones-1{
+    background-image: url(../img/imagenes/IMG-20250727-WA0015.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 20rem;
+    background-position: center right ;
+    margin-top: 5rem;
+}
+
+.tradiciones-2{
+    background-image: url(../img/imagenes/IMG-20250727-WA0021.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 20rem;
+    background-position: center right ;
+    margin-top: 5rem;
+}
+
+.tradiciones-3{
+    background-image: url(../img/imagenes/IMG-20250727-WA0036.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 20rem;
+    background-position: center right ;
+    margin-top: 5rem;
+}
+
+@media (min-width: 768px) {
+    .tradiciones,.tradiciones-1,.tradiciones-2,.tradiciones-3{
+        height: 30rem;
+    }
+}
+
+
+.boton-secciones{
+    display: block;
+    padding: 1rem;
+    background-color: #00000073;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;  
+    margin-bottom: 1.5rem;
+    transition: background-color 1s ease-in-out;
+
+}
+
+.boton-secciones:hover{
+    cursor: pointer;
+    background-color: #ffffff;
+    color:  #000000;
+}
+
+
+
+/* Tradiciones */
+
+.slider-tradiciones{
+    width: 100%;
+    max-width: 120rem;
+    height: 76.8rem;
+    overflow: hidden;
+}
+
+.slider-tradiciones ul{
+    display: flex;
+    padding: 0;
+    width: 400%;
+    list-style: none;
+
+    animation:  slide 20s infinite cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+
+.slider-tradiciones img {
+        width: 100%;
+        object-fit: cover;
+}
+
+@keyframes slide{
+    0% {margin-left: 0;}
+    20% {margin-left: 0;}
+
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+
+    75% {margin-left: -300%;}
+    100% {margin-left: -300%;}
+}
+
+
+@media (max-width: 768px) {
+    h1 {
+        margin-bottom: 1rem; /* Reduce el margen del h1 en móviles */
+        font-size: 2.5rem; /* También puedes reducir el tamaño del texto */
+        margin-left: 2rem;
+        text-align: left;
+    }
+
+    .container {
+        /* En móviles, la altura fija de 10rem es aún más problemática.
+           Considera anularla o ponerle un 'min-height'. */
+        height: auto; /* Permite que se adapte al contenido */
+        padding-top: 1rem; /* Menos padding en móviles */
+        padding-bottom: 1rem;
+    }
+    
+    .slider-tradiciones {
+        /* Reduce la altura del slider en móviles para que no sea tan grande */
+        height: 25rem; /* Por ejemplo, 40rem (640px) o menos */
+    }
+}
+
+@media (min-width: 768px) {
+    .contenido__principal-tradiciones{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .contenido__principal-contenido-tradiciones{
+        margin-top: 10rem;
+    }
+
+    .titulo{
+        font-size: 5rem;
+    }
+
+        .slider-tradiciones {
+        /* Reduce la altura del slider en móviles para que no sea tan grande */
+        height: 40rem; /* Por ejemplo, 40rem (640px) o menos */
+    }
+
+    .texto-tradiciones-parrafo:first-of-type{
+    margin-top: 8rem;
+        }
+}
+
+
+.imagen__tradiciones{
+    display: block;
+    margin: 0 auto;
+    width: 80rem;
+    max-width: 100%;
+    padding: 2rem;
+}
+
+
+.contenido__tradiciones{
+    max-width: 80rem;
+}
+
+.texto-tradiciones{
+    margin-bottom: 5rem;
+}
+
+.box-shadow{
+box-shadow: 1px 4px 41px 2px rgba(0,0,0,0.6);
+-webkit-box-shadow: 1px 4px 41px 2px rgba(0,0,0,0.6);
+-moz-box-shadow: 1px 4px 41px 2px rgba(0,0,0,0.6);
+margin: 1rem;
+padding: 3rem;
+}
+
+.contenido__principal-texto-cita{
+    padding-bottom: 5rem;
+}
