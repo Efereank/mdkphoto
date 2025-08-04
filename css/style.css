@@ -279,16 +279,39 @@ h3{
 
 
 
-/* Secciones */
+        /* Secciones */
 
-.tradiciones{
-    background-image: url(../img/imagenes/IMG-20250727-WA0040.jpg);
+.seccion,
+.tradiciones,
+.cultura,
+.DeLaCalle,
+.FotografiaCallejera,
+.personajes,
+.retratos,
+.PracticaDeCampo,
+.sesiones,
+.SemanaSanta2025 {
     background-size: cover;
     background-repeat: no-repeat;
-    height: 20rem;
+    height: 30rem;
     background-position: center right ;
-    margin-top: 8rem;
+    margin-top: 3rem;
 }
+
+@media (min-width: 768px) {
+    .tradiciones,
+    .cultura,.DeLaCalle,
+    .FotografiaCallejera,
+    .personajes,
+    .retratos,
+    .PracticaDeCampo,
+    .sesiones,
+    .SemanaSanta2025
+    {
+        height: 50rem;
+    }
+}
+
 
 @media (min-width: 768px) {
     .tradiciones{
@@ -296,38 +319,48 @@ h3{
     }
 }
 
-.tradiciones-1{
-    background-image: url(../img/imagenes/IMG-20250727-WA0015.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 20rem;
-    background-position: center right ;
-    margin-top: 5rem;
+.tradiciones{
+    background-image: url(../img/tradiciones/IMG-20250727-WA0040.jpg);
+
 }
 
-.tradiciones-2{
-    background-image: url(../img/imagenes/IMG-20250727-WA0021.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 20rem;
-    background-position: center right ;
-    margin-top: 5rem;
+.cultura{
+    background-image: url(../img/cultura/IMG-20250729-WA0052.jpg);
+
 }
 
-.tradiciones-3{
-    background-image: url(../img/imagenes/IMG-20250727-WA0036.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 20rem;
-    background-position: center right ;
-    margin-top: 5rem;
+.DeLaCalle{
+    background-image: url(../img/fotografia-callejera/IMG-20250730-WA0033.jpg);
+
 }
 
-@media (min-width: 768px) {
-    .tradiciones,.tradiciones-1,.tradiciones-2,.tradiciones-3{
-        height: 30rem;
-    }
+.FotografiaCallejera{
+    background-image: url(../img/fotografia-callejera/IMG-20250730-WA0006.jpg);
 }
+
+.personajes{
+    background-image: url(../img/fotografia-de-personajes/IMG-20250729-WA0119.jpg);
+}
+
+.retratos{
+    background-image: url(../img/fotografia-de-retratos/IMG-20250730-WA0050.jpg);
+        background-position: center top ;
+}
+
+.PracticaDeCampo{
+    background-image: url(../img/practica-de-campo/IMG-20250729-WA0102.jpg);
+}
+
+.sesiones{
+    background-image: url(../img/sesiones-1/IMG-20250729-WA0079.jpg);
+
+}
+
+.SemanaSanta2025{
+    background-image: url(../img/tradiciones-semana-santa2025/IMG-20250729-WA0140.jpg);
+}
+
+            /* Secciones  */
 
 
 .boton-secciones{
