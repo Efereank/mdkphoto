@@ -281,20 +281,40 @@ h3{
 
         /* Secciones */
 
+
+.box-shadow-1{
+box-shadow: 0px 10px 24px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 0px 10px 24px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 10px 24px 0px rgba(0,0,0,0.75);
+}
+
+
+.secciones{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-left: 3rem;
+}
+
 .seccion,
 .tradiciones,
 .cultura,
 .DeLaCalle,
 .FotografiaCallejera,
-.personajes,
 .retratos,
-.PracticaDeCampo,
 .sesiones,
 .SemanaSanta2025 {
     background-size: cover;
     background-repeat: no-repeat;
     height: 30rem;
     background-position: center right ;
+    margin-top: 3rem;
+}
+
+.PracticaDeCampo,.personajes{
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 30rem;
+    background-position: center left ;
     margin-top: 3rem;
 }
 
@@ -309,6 +329,14 @@ h3{
     .SemanaSanta2025
     {
         height: 50rem;
+        width: 50rem;
+
+        display: flex;
+
+        flex-direction: column-reverse;
+
+
+
     }
 }
 
